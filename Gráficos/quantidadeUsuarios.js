@@ -31,7 +31,7 @@ async function quantidadeUsuarios() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Nome das redes sociais',
+                text: 'Regioes do Brasil',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
