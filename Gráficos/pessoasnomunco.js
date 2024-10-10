@@ -40,7 +40,7 @@ async function quantidadeUsuarios() {
         yaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Número de localidades quilombolas',
+                text: 'Número de comunidades quilombolas',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
