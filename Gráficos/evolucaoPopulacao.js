@@ -1,6 +1,13 @@
+import { getCSS, tickConfig } from "./common.js";
+
 async function evolucaoPopulacao() {
-    const anos = [2018, 2019, 2020, 2021];
-    const populacaoConectada = [100, 120, 150, 170]; // Dados fictícios
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/evolucao-populacao.json'; // Ajuste para a URL correta
+    const res = await fetch(url);
+    const dados = await res.json();
+
+    // Supondo que os dados sejam um array de objetos com ano e populacao
+    const anos = dados.map(item => item.ano);
+    const populacaoConectada = dados.map(item => item.populacao_conectada);
 
     const data = [{
         x: anos,
