@@ -12,7 +12,7 @@ async function porcentagemConectados() {
 
     const data = [{
         values: [porcentagemConectada, 100 - porcentagemConectada],
-        labels: ['Conectados', 'Desconectados'],
+        labels: ['Em comunidades', 'Fora de comunidades'],
         type: 'pie',
         marker: {
             colors: [getCSS('--cor-principal'), getCSS('--cor-secundaria')]
