@@ -4,8 +4,8 @@ async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = ['Nordeste','Sudeste','Norte', 'Sul', 'Centro-Oeste']
-    const quantidadeUsuarios = ['3171','1359','873', '319', '250']
+    const nomeDasRedes = ['2005','2010','2015', '2020', '2024']
+    const quantidadeUsuarios = ['2000','2500','3000', '3500', '4000']
     const data = [
         {
             x: nomeDasRedes,
@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Comunidades Quilombolas no Brasil',
+            text: 'Crescimento Aproximado de Comunidades Quilombolas no Brasil',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
