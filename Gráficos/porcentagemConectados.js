@@ -1,14 +1,10 @@
 import { getCSS, tickConfig } from "./common.js";
 
 async function porcentagemConectados() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json';
-    const res = await fetch(url);
-    const dados = await res.json();
+    const pessoasConectadas = 2.5; // Novo valor em milhões
+    const pessoasMundo = 8.0; // Novo valor em bilhões
 
-    const pessoasConectadas = dados.total_pessoas_conectadas; // Ajustar para pegar os dados do JSON
-    const pessoasMundo = dados.total_pessoas_mundo;
-
-    const porcentagemConectada = ((pessoasConectadas / pessoasMundo) * 100).toFixed(2);
+    const porcentagemConectada = ((pessoasConectadas / (pessoasMundo * 1e3)) * 100).toFixed(2);
 
     const data = [{
         values: [porcentagemConectada, 100 - porcentagemConectada],
@@ -21,7 +17,7 @@ async function porcentagemConectados() {
 
     const layout = {
         title: {
-            text: 'Porcentagem de Pessoas Quilombolas no Mundo',
+            text: 'Porcentagem de Pessoas Quiombolas no mundo',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
