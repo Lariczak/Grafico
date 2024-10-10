@@ -3,3 +3,10 @@
     "tempo_medio": 1.696,
     "total_pessoas_mundo": 7.888e9
   }
+
+  [
+    {"ano": 2018, "populacao_conectada": 100},
+    {"ano": 2019, "populacao_conectada": 120},
+    {"ano": 2020, "populacao_conectada": 150},
+    {"ano": 2021, "populacao_conectada": 170}
+]
