@@ -4,7 +4,7 @@ async function quantidadeUsuarios() {
     const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
     const res = await fetch(url)
     const dados = await res.json()
-    const nomeDasRedes = ['2005','2010','2015', '2020', '2023']
+    const nomeDasRedes = ['2005','2010','2015', '2020', '2024']
     const quantidadeUsuarios = ['2000','2500','3000', '3500', '4000']
     const data = [
         {
@@ -31,7 +31,7 @@ async function quantidadeUsuarios() {
         xaxis: {
             tickfont: tickConfig,
             title: {
-                text: 'Regiões do Brasil',
+                text: 'Crescimento durante os anos',
                 font: {
                     color: getCSS('--cor-secundaria')
                 }
