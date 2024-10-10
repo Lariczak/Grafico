@@ -1,42 +1,59 @@
-import { getCSS, tickConfig } from "./common.js";
+import { getCSS, tickConfig } from "./common.js "
 
-async function porcentagemConectados() {
-    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/dados-globais.json';
-    const res = await fetch(url);
-    const dados = await res.json();
-
-    const pessoasConectadas = dados.total_pessoas_conectadas; // Ajustar para pegar os dados do JSON
-    const pessoasMundo = dados.total_pessoas_mundo;
-
-    const porcentagemConectada = ((pessoasConectadas / pessoasMundo) * 100).toFixed(2);
-
-    const data = [{
-        values: [porcentagemConectada, 100 - porcentagemConectada],
-        labels: ['Em comunidades', 'Fora de comunidades'],
-        type: 'pie',
-        marker: {
-            colors: [getCSS('--cor-principal'), getCSS('--cor-secundaria')]
+async function quantidadeUsuarios() {
+    const url = 'https://raw.githubusercontent.com/guilhermeonrails/api/main/numero-usuarios.json'
+    const res = await fetch(url)
+    const dados = await res.json()
+    const nomeDasRedes = ['Nordeste','Sudeste','Norte', 'Sul', 'Centro-Oeste']
+    const quantidadeUsuarios = ['3171','1359','873', '319', '250']
+    const data = [
+        {
+            x: nomeDasRedes,
+            y: quantidadeUsuarios,
+            type: 'bar',
+            marker: {
+                color: getCSS('--cor-barra')
+            }
         }
-    }];
+    ]
 
     const layout = {
+        plot_bgcolor: getCSS('--cor-de-fundo'),
+        paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Porcentagem de Pessoas Quilombolas no Mundo',
+            text: 'Comunidades Quilombolas no Brasil',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
                 size: 30
             }
         },
-        showlegend: true,
-        plot_bgcolor: getCSS('--cor-de-fundo'),
-        paper_bgcolor: getCSS('--cor-de-fundo'),
-    };
+        xaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Regiões do Brasil',
+                font: {
+                    color: getCSS('--cor-secundaria')
+                }
+            }
+        },
+        yaxis: {
+            tickfont: tickConfig,
+            title: {
+                text: 'Número de localidades quilombolas',
+                font: {
+                    color: getCSS('--cor-secundaria')
+                }
+            }
 
-    const grafico = document.createElement('div');
-    grafico.className = 'grafico';
-    document.getElementById('graficos-container').appendChild(grafico);
-    Plotly.newPlot(grafico, data, layout);
+        }
+
+    }
+    const grafico = document.createElement('div')
+    grafico.className - 'grafico'
+    document.getElementById('graficos-container').appendChild(grafico)
+    Plotly.newPlot(grafico, data, layout)
+
 }
 
-porcentagemConectados();
+quantidadeUsuarios()
