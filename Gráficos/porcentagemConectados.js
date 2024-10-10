@@ -21,7 +21,7 @@ async function porcentagemConectados() {
 
     const layout = {
         title: {
-            text: 'Porcentagem de Pessoas Conectadas',
+            text: 'Porcentagem de Pessoas em Comunidades no Mundo',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
