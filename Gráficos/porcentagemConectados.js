@@ -8,7 +8,7 @@ async function porcentagemConectados() {
 
     const data = [{
         values: [porcentagemConectada, 100 - porcentagemConectada],
-        labels: ['Em comunidades', 'Fora de comunidades'],
+        labels: ['Pessoas Veganas', 'Pessoas Não Veganas'],
         type: 'pie',
         marker: {
             colors: [getCSS('--cor-principal'), getCSS('--cor-secundaria')]
