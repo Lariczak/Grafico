@@ -21,7 +21,7 @@ async function quantidadeUsuarios() {
         plot_bgcolor: getCSS('--cor-de-fundo'),
         paper_bgcolor: getCSS('--cor-de-fundo'),
         title: {
-            text: 'Crescimento Aproximado de Comunidades Quilombolas no Brasil',
+            text: 'Crescimento Aproximado do Veganismo no Brasil',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
