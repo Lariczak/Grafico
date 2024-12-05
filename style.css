@@ -3,10 +3,10 @@
 :root {
 
     --cor-de-fundo: #351757;
-    --cor-principal: #097cda;
-    --cor-secundaria: #60f3f8;
+    --cor-principal: #ff40cf;
+    --cor-secundaria: #f8609f;
     --fonte: "Sofadi One", system-ui;
-    --cor-barra: rgb(158, 245, 232);
+    --cor-barra: rgb(245, 158, 209);
 }
 
 body {
