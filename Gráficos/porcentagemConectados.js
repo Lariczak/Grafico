@@ -17,7 +17,7 @@ async function porcentagemConectados() {
 
     const layout = {
         title: {
-            text: 'Porcentagem de Pessoas Quiombolas no mundo',
+            text: 'Porcentagem de Pessoas Veganas no mundo',
             font: {
                 color: getCSS('--cor-principal'),
                 family: getCSS('--fonte'),
