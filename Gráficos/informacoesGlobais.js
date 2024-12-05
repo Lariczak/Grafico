@@ -12,7 +12,7 @@ async function visualizarInformacoesGlobais() {
     const paragrafo = document.createElement('p');
     paragrafo.classList.add('graficos-container__texto');
     
-    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${pessoasMundo} bilhões</span> de pessoas e que aproximadamente <span>${pessoasConectadas} milhões</span> são veganas por opção? <span>${municipios}</span> mil no Brasil?<br>`;
+    paragrafo.innerHTML = `Você sabia que o mundo tem <span>${pessoasMundo} bilhões</span> de pessoas e que aproximadamente <span>${pessoasConectadas} milhões</span> são veganas por opção?<br>`;
     
     const container = document.getElementById('graficos-container');
     container.appendChild(paragrafo);
